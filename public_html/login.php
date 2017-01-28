@@ -1,7 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: robcardy
- * Date: 2017-01-28
- * Time: 5:57 PM
- */
+require("../includes/config.php");
+$values["title"] = "Login";
+render("../templates/login-form.php", $values);

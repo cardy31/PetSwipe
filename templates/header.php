@@ -27,9 +27,12 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">HOME</a></li>
-                <li><a href="/about.php">ABOUT</a></li>
+                <li><a href="../public_html/login.php">Login</a></li>
                 <li><a href="stats.php">STATS</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<div class="title">
+    <h1><?php echo $title?></h1>
+</div>
