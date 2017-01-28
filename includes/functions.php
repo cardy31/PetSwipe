@@ -1,9 +1,10 @@
 <?php
 // Properly renders pages with header and footer
-function render($template) {
+function render($template, $values) {
     if (file_exists("../templates/$template")) {
-//        extract($values);
-
+        if ($values != NULL){
+            extract($values);
+        }
         require("../templates/header.php");
 
         require("../templates/$template");

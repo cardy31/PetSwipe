@@ -7,13 +7,9 @@
 }
 
 .navbar-default .navbar-brand {
-    font-size: 40pt;
+    font-size: 30pt;
     color: white;
-    max-height: 10px;
-    max-width: 20px;
-    overflow: visible;
-    padding-top: 6vh;
-    padding-bottom: 0;
+    padding-top: 5vh;
 }
 
 .nav.navbar-nav.navbar-right li a {
