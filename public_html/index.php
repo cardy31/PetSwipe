@@ -1,3 +1,4 @@
 <?php
 require("../includes/config.php");
-render("../templates/home.php");
+$values["title"] = "Home";
+render("../templates/home.php", $values);
