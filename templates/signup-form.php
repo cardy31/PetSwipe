@@ -14,7 +14,7 @@
         </div>
         <div class="form-group">
             <label for="Password">Password</label>
-            <input class="form-control" type="password" name="password">
+            <input class="form-control" type="password" placeholder="Password" name="password">
         </div>
         <div class="form-group">
             <label for="Email">Email</label>
