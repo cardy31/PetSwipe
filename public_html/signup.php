@@ -1,4 +1,5 @@
 <?php
 require("../includes/config.php");
-render("../templates/signup-view.php");
+$values["title"] = "Sign Up";
+render("../templates/signup-view.php", $values);
 
