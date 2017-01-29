@@ -35,6 +35,7 @@ function get_swiped_pets() {
 }
 
 $allPets = get_swiped_pets();
+var_dump($allDump);
 foreach($allPets as $entry) {
     if ($entry['memberUserId'] == $_SESSION['user']) {
         $pet = get_pet($entry['animalCode']);
