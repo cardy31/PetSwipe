@@ -8,7 +8,11 @@ function get_pet($id) {
     $output= "full"; //sets information gathered to all
     $location= "10118"; //empire state building location as default
     // creates the signature for accessing the api
-    $code = md5($secret . "key=" . $public . "&id= " . $id . "&format=json" );
+    $id ="36311985";
+    $met = ($secret . "key=" . $public . "&id=" . $id . "&format=json" );
+    print_r ($met);
+    $code = md5($met);
+    print_r($code);
     // final processed line used to access the api
     $url = "http://api.petfinder.com/pet.get?key=" . $public . "&id=" . $id . "&format=json&sig=" . $code;
     print_r($url);
