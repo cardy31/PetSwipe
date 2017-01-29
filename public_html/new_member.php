@@ -35,6 +35,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec($ch);
 curl_close($ch);
 
-var_dump($data);
-print_r(json_decode($data, true));
+$values['title'] = "Member Area"
+render("../templates/member-view.php", $values, __FILE__);
 

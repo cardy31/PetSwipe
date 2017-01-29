@@ -27,6 +27,7 @@ $age = $decoded['age']['$t'];
 $sex = $decoded['sex']['$t'];
 $pic = $decoded['media']['photos']['photo'][0]['$t'];
 $pic = strtok($pic, '?');
+$code = $decoded['id']['$t'];
 
 if ($sex == "M") {
     $sex = "Male";
@@ -39,7 +40,7 @@ else {
 <!--HTML for the structure of the page-->
 <div class="body-wrapper">
     <div class="col-sm-3" id="reject-div">
-        <button type="submit" class="btn btn-danger" id="reject">Bad</button>
+        <button type="submit" class="btn btn-danger" id="reject">Not For Me</button>
     </div>
 
     <div class="col-sm-6" id="swipe-pic">
@@ -50,7 +51,7 @@ else {
     </div>
 
     <div class="col-sm-3" id="accept-div">
-        <button type="submit" class="btn btn-submit" id="accept">Good</button>
+        <button type="submit" class="btn btn-success" id="accept">Like!</button>
     </div>
 </div>
 
@@ -72,9 +73,9 @@ else {
                 {
                     accept : "true"
                 },
-                function(data, status){
-                    alert("Data: " + data + "\nStatus: " + status);
-                });
+//                function(data, status){
+//                    alert("Data: " + data + "\nStatus: " + status);
+//                });
         }
     };
 </script>
@@ -85,7 +86,7 @@ else {
         $.post("submitSwipe.php",
             {
                 accept : "false",
-                AnimalCode : "animalcode" // This should be updated to use the proper variable from the API
+                animalCode : <?php echo $code ?> // This should be updated to use the proper variable from the API
             },
             function(data, status){
                 alert("Data: " + data + "\nStatus: " + status);
@@ -95,11 +96,11 @@ else {
         $.post("submitSwipe.php",
             {
                 accept : "false",
-                AnimalCode : "animalcode" // This should be updated to use the proper variable from the API
+                animalCode : <?php echo $code ?> // This should be updated to use the proper variable from the API
             },
-            function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
-            });
+//            function(data, status){
+//                alert("Data: " + data + "\nStatus: " + status);
+//            });
     });
 </script>
 

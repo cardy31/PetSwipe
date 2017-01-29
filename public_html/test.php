@@ -19,6 +19,5 @@ $data = curl_exec($ch);
 curl_close($ch);
 
 $decoded = json_decode($data, true);
-$url = $decoded['petfinder']['pet']['media']['photos']['photo'][0]['$t'];
-$url = strtok($url, '?');
+$url = $decoded['petfinder']['pet']['id']['$t'];
 print_r($url);

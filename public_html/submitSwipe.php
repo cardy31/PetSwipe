@@ -4,13 +4,8 @@ require("../includes/config.php");
 
 
 $newSwipe = array();
-$newSwipe['AnimalCode'] = $_POST['AnimalCode'];
-$newSwipe['Member'] = $_SESSION['USER'];
-
-/*
-echo "Hello!";
- $_POST['accept'];
-*/
+$newSwipe['animalCode'] = $_POST['animalCode'];
+$newSwipe['member'] = $_SESSION['USER'];
 
 $json = json_encode($newSwipe);
 
@@ -31,7 +26,7 @@ var_dump($data);
 print_r(json_decode($data, true));
 
 
-$values["title"] = "Submit Swipe";
+$values["title"] = "Swipe";
 render("../templates/swipe-view.php", $values, __FILE__);
 
 

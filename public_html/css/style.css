@@ -39,32 +39,38 @@
 }
 
 #accept-div {
-    margin-top: 30vh;
-    text-align: center;
+    text-align: right;
     position: relative;
+    padding-left: 0;
 }
 
 #reject-div {
-    margin-top: 30vh;
-    text-align: center;
+    text-align: left;
     position: relative;
+    padding-left: 0;
 }
 
 #accept {
-    height: 20vh;
-    width: 20vw;
+    height: 82vh;
+    width: 25vw;
+    font-family: roboto;
+    font-size: 50pt;
 }
 
 #reject {
-    height: 20vh;
-    width: 20vw;
+    height: 82vh;
+    width: 25vw;
+    font-family: roboto;
+    font-size: 50pt;
 }
 
 #swipe-pic {
     text-align: center;
+    font-family: roboto;
 }
 
-/*.body-wrapper {*/
-    /*padding-left: 10vw;*/
-    /*padding-right: 10vw;*/
-/*}*/
+#main-pic {
+    max-height: 60vh;
+    max-width: 50vw;
+    padding-left: 0;
+}
