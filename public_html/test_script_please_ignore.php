@@ -88,6 +88,7 @@ for($i = 0; $i < count($decoded['foods']); $i++){
 
 /*
  * Sample XML
+ * http://stackoverflow.com/questions/6578832/how-to-convert-xml-into-array-in-php
  */
 //$xmlString = "<aaaa Version="1.0">
 //   <bbb>
