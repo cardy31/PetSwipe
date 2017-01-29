@@ -29,6 +29,7 @@
                 <li><a href="/">HOME</a></li>
                 <li><a href="../public_html/login.php">Login</a></li>
                 <li><a href="../public_html/test.php">Test</a></li>
+                <li><a href="../public_html/swipe.php">Swipe</a></li>
             </ul>
         </div>
     </div>
