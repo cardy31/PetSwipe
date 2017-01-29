@@ -11,13 +11,15 @@ function get_pet($id) {
     $code = md5($secret . "key=" . $public . "&id= " . $id . "&format=json" );
     // final processed line used to access the api
     $url = "http://api.petfinder.com/pet.get?key=" . $public . "&id=" . $id . "&format=json&sig=" . $code;
+    print_r($url);
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $data = curl_exec($ch);
     curl_close($ch);
-    return json_decode($data, true);
+    $data = json_decode($data, true);
+    return $data;
 }
 
 $data = get_pet("31765159");
