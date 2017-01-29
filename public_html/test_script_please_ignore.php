@@ -1,7 +1,7 @@
 <?php
 
 /*
- * POST to the Nutitionix endpoint to get our info
+ * This portion of code is used to access the API with the use of md5
  */
 $query = $_GET['query'];
 $secret ="3b01189e7d22ef5343b93af919a2a592";
@@ -9,8 +9,10 @@ $public= "e540e02b94af2ffb8a82381b03e11654";
 $animal= "dog"; // can be set via choice
 $output= "full"; //sets information gathered to all
 $location= "10118"; //empire state building location as default
-$code = md5($public . "key=" . $secret . "&location=" . $location . "&animal=" . $animal . "&output=" . $output );
-$url = "http://api.petfinder.com/pet.getRandom?key=e540e02b94af2ffb8a82381b03e11654&location=10118&output=full&sig=2418e58c29c03e3fbf69b48105de2478";
+// creates the signature for accessing the api
+$code = md5($public . "key=" . $secret . "&location=10118&animal=" . $animal . "&output=" . $output );
+// final processed line used to access the api
+$url = "http://api.petfinder.com/pet.getRandom?key=" . $public . "&location=10118&output=full&sig=" . $code;
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'x-app-id:2979e4bf',
