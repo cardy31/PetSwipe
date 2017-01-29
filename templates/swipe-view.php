@@ -39,7 +39,8 @@
     $("#reject").click(function(){
         $.post("submitSwipe.php",
             {
-                accept : "false"
+                accept : "false",
+                AnimalCode : "animalcode" // This should be updated to use the proper variable from the API
             },
             function(data, status){
                 alert("Data: " + data + "\nStatus: " + status);
@@ -48,7 +49,8 @@
     $("#accept").click(function(){
         $.post("submitSwipe.php",
             {
-                accept : "false"
+                accept : "false",
+                AnimalCode : "animalcode" // This should be updated to use the proper variable from the API
             },
             function(data, status){
                 alert("Data: " + data + "\nStatus: " + status);
