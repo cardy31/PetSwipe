@@ -4,5 +4,5 @@ $values["title"] = "Logout";
 
 $_SESSION['user'] = null;
 
-render("../templates/logout-view.php", $values);
+render("../templates/logout-view.php", $values, __FILE__);
 

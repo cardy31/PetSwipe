@@ -21,7 +21,7 @@ foreach($data as $val) {
             session_start();
             $_SESSION['user'] = $val['id'];
             $value['title'] = "Swiping";
-            render("../public_html/swipe.php", $value);
+            render("../public_html/swipe.php", $value, __FILE__);
         }
     }
 }
