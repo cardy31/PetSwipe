@@ -103,3 +103,13 @@
 #signTile {
     padding-left: 15%;
 }
+
+#memberImage {
+    max-height: 50vh;
+    max-width: 30vw;
+    height: 50vh;
+}
+
+#memberCont {
+    padding-bottom: 30px;
+}

@@ -2,6 +2,8 @@
 ?>
 <div class="container">
     <h1>Member Area</h1>
+    <h4>These are your previously accepted pets</h4>
+    <br><br>
 </div>
 <?php
 function get_pet($id) {
@@ -38,18 +40,35 @@ function get_swiped_pets() {
     return $data;
 }
 
+function display_pet($petData) { ?>
+    <div class="container" id="memberCont">
+        <div class="col-lg-6">
+            <img src="<?php echo $petData['pic'] ?>" id="memberImage">
+        </div>
+        <div class="col-lg-6">
+            <h1><?php echo $petData['name'] . "</h1><br>";
+            echo $petData['age'] . "<br>";
+            echo $petData['sex'] . "<br>";
+            echo "<div class='pre-scrollable'>" . $petData['description'] . "</div><br>"; ?>
+        </div>
+        <div><br><br></div>
+    </div>
+    <?php
+}
+
 $allPets = get_swiped_pets();
 foreach($allPets as $entry) {
     if ($entry['memberUserId'] == $_SESSION['user']) {
         $pet = get_pet($entry['animalCode']);
         $pet = $pet['petfinder']['pet'];
-        $name = $pet['name']['$t'];
-        $age = $pet['age']['$t'];
-        $description = $pet['description']['$t'];
-        $sex = $pet['sex']['$t'];
+        $petData = array();
+        $petData['name'] = $pet['name']['$t'];
+        $petData['age'] = $pet['age']['$t'];
+        $petData['description'] = $pet['description']['$t'];
+        $petData['sex'] = $pet['sex']['$t'];
         $photo = $pet['media']['photos']['photo'][0]['$t'];
-
-
+        $petData['pic'] = strtok($photo, '?');
+        display_pet($petData);
     }
 }
 
