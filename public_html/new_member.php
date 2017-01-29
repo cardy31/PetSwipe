@@ -1,4 +1,7 @@
 <?php
+/**
+ * Adds a new member to the database
+ */
 
 $newMemberData = array();
 
@@ -8,7 +11,7 @@ $newMemberData['firstname'] = $_POST['first'];
 $newMemberData['lastname'] = $_POST['last'];
 $newMemberData['email'] = $_POST['email'];
 $newMemberData['username'] = $_POST['username'];
-$newMemberData['hash'] = crypt($_POST['password']);
+$newMemberData['hash'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
 $newMemberData['age'] = $_POST['age'];
 $newMemberData['address'] = $_POST['address'];
 $newMemberData['prov'] = $_POST['province'];
