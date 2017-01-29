@@ -105,11 +105,15 @@
 }
 
 #memberImage {
-    max-height: 50vh;
+    max-height: 40vh;
     max-width: 30vw;
     height: 50vh;
 }
 
 #memberCont {
     padding-bottom: 30px;
+}
+
+#memberPics {
+    text-align: center;
 }

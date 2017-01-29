@@ -35,5 +35,5 @@ $data = curl_exec($ch);
 curl_close($ch);
 
 $values['title'] = "Member Area";
-render("../templates/login-form.php", $values, __FILE__);
+render("../templates/adoptionWarning-view.php", $values, __FILE__);
 

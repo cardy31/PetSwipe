@@ -42,7 +42,7 @@ function get_swiped_pets() {
 
 function display_pet($petData) { ?>
     <div class="container" id="memberCont">
-        <div class="col-lg-6">
+        <div class="col-lg-6" id="memberPics">
             <img src="<?php echo $petData['pic'] ?>" id="memberImage">
         </div>
         <div class="col-lg-6">
