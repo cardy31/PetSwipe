@@ -18,7 +18,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec($ch);
 curl_close($ch);
 
-$decoded = json_decode($data);
-
-print_r($decoded);
-print_r("XD");
+$decoded = json_decode($data, true);
+$url = $decoded['petfinder']['pet']['media']['photos']['photo'][0]['$t'];
+$url = strtok($url, '?');
+print_r($url);

@@ -21,6 +21,7 @@ foreach($data as $val) {
         if (password_verify($password, $val['hash'])) {
             session_start();
             $_SESSION['user'] = $val['id'];
+            $_SESSION['animal'] = $val['animalToAdopt'];
             $value['title'] = "Member Area";
             $auth = true;
             render("../templates/member-view.php", $value, __FILE__);
