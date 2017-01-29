@@ -80,5 +80,13 @@
 }
 
 #puppy1 {
-    max-height: 50vh;
+    height: 48vh;
+    padding: 0;
+    border: 0;
+}
+
+#cat1 {
+    height: 48vh;
+    padding: 0;
+    border: 0;
 }

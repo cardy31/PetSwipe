@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-xs-6 col-md-3">
                 <a href="#" class="thumbnail">
-                    <img src="https://i.reddituploads.com/cb0da287e75e47b8a4f655aa2dbd23e0?fit=max&h=1536&w=1536&s=f04b94bd428825b608eb1e0344f6f349" alt="">
+                    <img src="https://i.reddituploads.com/cb0da287e75e47b8a4f655aa2dbd23e0?fit=max&h=1536&w=1536&s=f04b94bd428825b608eb1e0344f6f349" id="cat1">
                 </a>
             </div>
             <div class="col-xs-6 col-md-3">
