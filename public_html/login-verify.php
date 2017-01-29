@@ -6,3 +6,7 @@
  * Time: 6:29 PM
  */
 
+$username = $_GET['username'];
+
+$url = "http://www.robcardy.com/api/member/";
+
