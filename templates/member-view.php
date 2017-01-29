@@ -7,7 +7,8 @@ function get_pet($id) {
     $output= "full"; //sets information gathered to all
     $location= "10118"; //empire state building location as default
     // creates the signature for accessing the api
-    $code = md5($secret . "key=" . $public . "&id= " . $id . "&format=json" );
+    $met = ($secret . "key=" . $public . "&id=" . $id . "&format=json" );
+    $code = md5($met);
     // final processed line used to access the api
     $url = "http://api.petfinder.com/pet.get?key=" . $public . "&id=" . $id . "&format=json&sig=" . $code;
     $ch = curl_init($url);
@@ -16,7 +17,8 @@ function get_pet($id) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     $data = curl_exec($ch);
     curl_close($ch);
-    return json_decode($data, true);
+    $data = json_decode($data, true);
+    return $data;
 }
 
 function get_swiped_pets() {
@@ -35,9 +37,11 @@ function get_swiped_pets() {
 $allPets = get_swiped_pets();
 foreach($allPets as $entry) {
     if ($entry['memberUserId'] == $_SESSION['user']) {
-        echo "HERE";
         $pet = get_pet($entry['animalCode']);
-        print_r($pet);
-        echo "<br><br>";
+        $pet = $pet['petfinder']['pet'];
+        $name = $pet['name']['$t'];
+        $age = $pet['age']['$t'];
+        $description = $pet['description']['$t'];
+
     }
 }
