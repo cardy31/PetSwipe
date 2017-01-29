@@ -33,11 +33,38 @@
     margin-left: 10vw;
 }
 
-.swipe-pic {
-    height: 15vh;
-    width: 15vw;
-}
 
 .error-message {
     margin-left: 10vw;
 }
+
+#accept-div {
+    margin-top: 30vh;
+    text-align: center;
+    position: relative;
+}
+
+#reject-div {
+    margin-top: 30vh;
+    text-align: center;
+    position: relative;
+}
+
+#accept {
+    height: 20vh;
+    width: 20vw;
+}
+
+#reject {
+    height: 20vh;
+    width: 20vw;
+}
+
+#swipe-pic {
+    text-align: center;
+}
+
+/*.body-wrapper {*/
+    /*padding-left: 10vw;*/
+    /*padding-right: 10vw;*/
+/*}*/
