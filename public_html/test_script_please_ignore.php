@@ -10,9 +10,9 @@ $animal= "dog"; // can be set via choice
 $output= "full"; //sets information gathered to all
 $location= "10118"; //empire state building location as default
 // creates the signature for accessing the api
-$code = md5($public . "key=" . $secret . "&location=10118&animal=" . $animal . "&output=" . $output );
+$code = md5($public . "key=" . $secret . "&location=10118&animal=" . $animal . "&output=" . $output . "&format=json");
 // final processed line used to access the api
-$url = "http://api.petfinder.com/pet.getRandom?key=" . $public . "&location=10118&output=full&sig=" . $code;
+$url = "http://api.petfinder.com/pet.getRandom?key=" . $public . "&location=10118&animal=" . $animal . "&output=full&format=json&sig=" . $code;
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_HTTPHEADER, array(
     'x-app-id:2979e4bf',
