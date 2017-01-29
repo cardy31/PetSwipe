@@ -5,7 +5,7 @@ if(isset($values['message'])) {
 }
 ?>
 <div id="signup-form">
-    <form action="../public_html/login-verify.php" method="post">
+    <form action="/login-verify.php" method="post">
         <div class="form-group">
             <label for="Username">Username</label>
             <input class="form-control" type="text" placeholder="Username" name="username">
@@ -17,5 +17,5 @@ if(isset($values['message'])) {
         <button type="submit" class="btn btn-default">Login</button>
     </form>
     <br>
-    <p>Don't have an account? <a href="../public_html/signup.php">Create one!</a></p>
+    <p>Don't have an account? <a href="/signup.php">Create one!</a></p>
 </div>

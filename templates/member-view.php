@@ -57,8 +57,10 @@ function display_pet($petData) { ?>
 }
 
 $allPets = get_swiped_pets();
+$check = false;
 foreach($allPets as $entry) {
     if ($entry['memberUserId'] == $_SESSION['user']) {
+        $check = true;
         $pet = get_pet($entry['animalCode']);
         $pet = $pet['petfinder']['pet'];
         $petData = array();
@@ -71,7 +73,11 @@ foreach($allPets as $entry) {
         display_pet($petData);
     }
 }
-
+if($check == false){?>
+    <div class="container">
+        <h4>Swipe right to add more pets!</h4>
+    </div><?php
+}
 ?>
 
 

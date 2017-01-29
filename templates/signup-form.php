@@ -1,8 +1,8 @@
-<div id="signTitle">
+<div id="signTitle" class="container">
     <h1>Sign Up Now!</h1>
 </div>
 <div id="signup-form">
-    <form action="../public_html/new_member.php" method="post">
+    <form action="/new_member.php" method="post">
         <div class="form-group">
             <label for="Firstname">First Name</label>
             <input class="form-control" type="text" placeholder="John" name="first">

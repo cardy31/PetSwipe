@@ -83,10 +83,9 @@ else {
 <!--Buttons clicked left/right-->
 <script>
     $("#reject").click(function(){
-        $.post("submitSwipe.php",
+        $.post("",
             {
-                accept : "false",
-                animalCode : <?php echo $code ?> // This should be updated to use the proper variable from the API
+
             },
             function(){
                 window.location.reload();
@@ -101,9 +100,6 @@ else {
             function(){
                 window.location.reload();
             });
-//            function(data, status){
-//                alert("Data: " + data + "\nStatus: " + status);
-//            });
     });
 </script>
 

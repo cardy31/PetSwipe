@@ -22,6 +22,3 @@ function get_pet($id) {
     $data = json_decode($data, true);
     return $data;
 }
-
-$data = get_pet("31765159");
-print_r($data);
