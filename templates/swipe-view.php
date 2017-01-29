@@ -1,6 +1,6 @@
 
 <div class="col-sm-4">
-    <button type="submit" class="btn btn-danger">Bad</button>
+    <button type="submit" class="btn btn-danger" id="reject">Bad</button>
 </div>
 
 <div class="col-sm-4">
@@ -8,7 +8,7 @@
 </div>
 
 <div class="col-sm-4">
-    <button type="submit" class="btn btn-submit">Good</button>
+    <button type="submit" class="btn btn-submit" id="accept">Good</button>
 
 </div>
 
@@ -25,9 +25,37 @@
                 });
         } else if (e.keyCode == '39') {
             // right
+            $.post("submitSwipe.php",
+                {
+                    accept : "true"
+                },
+                function(data, status){
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
         }
     };
 </script>
+<script>
+    $("#reject").click(function(){
+        $.post("submitSwipe.php",
+            {
+                accept : "false"
+            },
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    });
+    $("#accept").click(function(){
+        $.post("submitSwipe.php",
+            {
+                accept : "false"
+            },
+            function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    });
+</script>
+
 
 
 
