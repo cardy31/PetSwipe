@@ -1,5 +1,5 @@
 <div id="signup-form">
-    <form action="../public_html/new_member.php">
+    <form action="../public_html/new_member.php" method="post">
         <div class="form-group">
             <label for="Firstname">First Name</label>
             <input class="form-control" type="text" placeholder="John" name="first">
@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <label for="Age">Age</label>
-            <input class="form-control" type="date" placeholder="25" name="age">
+            <input class="form-control" type="text" placeholder="25" name="age">
         </div>
         <div class="form-group">
             <label for="Address">Address</label>

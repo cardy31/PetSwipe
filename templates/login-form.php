@@ -1,5 +1,5 @@
 <div id="signup-form">
-    <form action="../public_html/login-verify.php">
+    <form action="../public_html/login-verify.php" method="post">
         <div class="form-group">
             <label for="Username">Username</label>
             <input class="form-control" type="text" placeholder="Username" name="username">
