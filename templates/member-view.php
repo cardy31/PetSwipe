@@ -1,5 +1,9 @@
 <?php
-echo $_SESSION['user'];
+?>
+<div id="memberTitle">
+    <h1>Member Area</h1>
+</div>
+<?php
 function get_pet($id) {
     $secret ="3b01189e7d22ef5343b93af919a2a592";
     $public= "e540e02b94af2ffb8a82381b03e11654";
@@ -35,7 +39,6 @@ function get_swiped_pets() {
 }
 
 $allPets = get_swiped_pets();
-var_dump($allDump);
 foreach($allPets as $entry) {
     if ($entry['memberUserId'] == $_SESSION['user']) {
         $pet = get_pet($entry['animalCode']);
@@ -45,8 +48,9 @@ foreach($allPets as $entry) {
         $description = $pet['description']['$t'];
         $sex = $pet['sex']['$t'];
         $photo = $pet['media']['photos']['photo'][0]['$t'];
-        
     }
 }
+
+?>
 
 
