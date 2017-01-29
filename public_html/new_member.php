@@ -1,5 +1,10 @@
 <?php
 
+echo $_POST['open'];
+
+
+
+/*
 $newMemberData = array();
 
 print_r($_POST['first']);
@@ -18,4 +23,5 @@ $newMemberData['AnimalToAdopt'] = $_POST['pet'];
 $url = 'http://robcardy.com/API/';
 
 $ch = curl_init($url);
+*/
 
