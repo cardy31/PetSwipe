@@ -1,6 +1,6 @@
 <?php
 
-echo $_POST['open'];
+var_dump($_POST);
 
 
 
