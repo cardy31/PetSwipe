@@ -37,7 +37,6 @@
                     echo "<li><a href=$string>Member Area</a></li>";
                 }
                 ?>
-                <li><a href="../public_html/test.php">Test</a></li>
                 <li><a href="../public_html/swipe.php">Swipe</a></li>
                 <?php
                 if($_SESSION['user'] != null) {

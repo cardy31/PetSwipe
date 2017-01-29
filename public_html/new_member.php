@@ -3,9 +3,8 @@
  * Adds a new member to the database
  */
 
+require("../includes/config.php");
 $newMemberData = array();
-
-var_dump($_POST);
 
 $newMemberData['firstname'] = $_POST['first'];
 $newMemberData['lastname'] = $_POST['last'];
@@ -28,7 +27,7 @@ $url = 'http://www.robcardy.com/api/member/';
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch,CURLOPT_SSL_VERIFYPEER, false);
-curl_setopt($ch, CURLOPT_USERPWD, "default" . ":" . "password123");
+curl_setopt($ch, CURLOPT_USERPWD, "cardy31" . ":" . "JA83nq&E");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $newMemberData);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -36,5 +35,5 @@ $data = curl_exec($ch);
 curl_close($ch);
 
 $values['title'] = "Member Area";
-render("../templates/member-view.php", $values, __FILE__);
+render("../templates/login-form.php", $values, __FILE__);
 

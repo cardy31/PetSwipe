@@ -5,7 +5,7 @@ require("../includes/config.php");
 
 $newSwipe = array();
 $newSwipe['animalCode'] = $_POST['animalCode'];
-$newSwipe['memberUserId'] = $_SESSION['USER'];
+$newSwipe['memberUserId'] = $_SESSION['user'];
 
 $json = json_encode($newSwipe);
 
