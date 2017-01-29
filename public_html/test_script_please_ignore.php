@@ -85,26 +85,3 @@ for($i = 0; $i < count($decoded['foods']); $i++){
 
     print_r(json_decode($data2, true));
 }
-
-/*
- * Sample XML
- * http://stackoverflow.com/questions/6578832/how-to-convert-xml-into-array-in-php
- */
-//$xmlString = "<aaaa Version="1.0">
-//   <bbb>
-//     <cccc>
-//       <dddd Id="id:pass" />
-//       <eeee name="hearaman" age="24" />
-//     </cccc>
-//   </bbb>
-//</aaaa>";
-
-$xml = new SimpleXMLElement($xmlString);
-echo $xml->bbb->cccc->dddd['Id'];
-echo $xml->bbb->cccc->eeee['name'];
-// or...........
-foreach ($xml->bbb->cccc as $element) {
-    foreach($element as $key => $val) {
-        echo "{$key}: {$val}";
-    }
-}
