@@ -1,6 +1,6 @@
 <?php
 ?>
-<div id="memberTitle">
+<div class="container">
     <h1>Member Area</h1>
 </div>
 <?php
@@ -48,6 +48,8 @@ foreach($allPets as $entry) {
         $description = $pet['description']['$t'];
         $sex = $pet['sex']['$t'];
         $photo = $pet['media']['photos']['photo'][0]['$t'];
+
+
     }
 }
 
