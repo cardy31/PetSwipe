@@ -9,12 +9,12 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="#" class="thumbnail" id="thumb1">
                     <img src="https://i.reddituploads.com/cb0da287e75e47b8a4f655aa2dbd23e0?fit=max&h=1536&w=1536&s=f04b94bd428825b608eb1e0344f6f349" id="cat1">
                 </a>
             </div>
             <div class="col-xs-6 col-md-3">
-                <a href="#" class="thumbnail">
+                <a href="#" class="thumbnail" id="thumb2">
                     <img src="http://i.imgur.com/SjxoKai.jpg" id="puppy1">
                 </a>
             </div>
