@@ -44,6 +44,7 @@
                     echo "<li><a href=$string>Logout</a></li>";
                 }
                 ?>
+                <li><a href="../public_html/test.php">Test</a></li>
             </ul>
         </div>
     </div>
