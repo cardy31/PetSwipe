@@ -15,3 +15,11 @@ function render($template, $values) {
         trigger_error("Template does not exist.", E_USER_ERROR);
     }
 }
+
+$exempt_urls = ["login.php", "index.php", "signup.php", "new_member.php"];
+if (isset($_SESSION['user']) && in_array(__FILE__, $exempt_urls)) {
+
+} else {
+    $values['title'] = "Login";
+    render("login-form.php", $values);
+}

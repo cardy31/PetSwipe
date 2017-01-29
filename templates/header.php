@@ -28,7 +28,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/">HOME</a></li>
                 <li><a href="../public_html/login.php">Login</a></li>
-                <li><a href="stats.php">STATS</a></li>
+                <li><a href="../public_html/test.php">Test</a></li>
             </ul>
         </div>
     </div>
