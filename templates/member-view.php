@@ -43,6 +43,5 @@ foreach($allPets as $entry) {
         $name = $pet['name']['$t'];
         $age = $pet['age']['$t'];
         $description = $pet['description']['$t'];
-
     }
 }

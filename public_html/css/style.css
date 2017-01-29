@@ -1,6 +1,6 @@
 .navbar {
     font-size: 25pt;
-    background-color: #000000;
+    background-color: #428bca;
     border-color: transparent;
     margin-bottom: 0px;
     height: 13vh;
@@ -76,26 +76,26 @@
     padding-left: 0;
 }
 #firstJum {
-    margin: 0;
+    background-image: url("http://www.hvac2000.com/wp-content/uploads/2016/10/Dog-images-5.jpg");
+    background-size: cover;
+    height: 75vh;
+    color: white;
+    margin-bottom: 0;
 }
 
-#thumb1 {
-    margin: 0;
+#firstJumText {
+    padding-top: 4vh;
 }
 
-#thumb2 {
-    margin: 0;
-
+#secondJum {
+    background-image: url("http://www.carmaa-petadoption.com/wp-content/uploads/Fostering-Kittens-Header.png");
+    background-size: cover;
+    height: 75vh;
+    margin-bottom: 0;
 }
 
-#puppy1 {
-    height: 48vh;
-    padding: 0;
-    border: 0;
-}
-
-#cat1 {
-    height: 48vh;
-    padding: 0;
-    border: 0;
+#secondJumText {
+    padding-top: 53vh;
+    text-align: center;
+    color: white;
 }

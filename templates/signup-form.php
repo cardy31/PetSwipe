@@ -1,3 +1,4 @@
+
 <div id="signup-form">
     <form action="../public_html/new_member.php" method="post">
         <div class="form-group">
