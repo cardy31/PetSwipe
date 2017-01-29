@@ -21,3 +21,4 @@ curl_close($ch);
 $decoded = json_decode($data, true);
 $url = $decoded['petfinder']['pet']['id']['$t'];
 print_r($url);
+print-r("XD");

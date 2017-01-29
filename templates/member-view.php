@@ -7,9 +7,9 @@ function get_pet($id) {
     $output= "full"; //sets information gathered to all
     $location= "10118"; //empire state building location as default
     // creates the signature for accessing the api
-    $code = md5($secret . "key=" . $public . "&location=10118&animal=" . $animal . "&output=" . $output . "&format=json" );
+    $code = md5($secret . "key=" . $public . "&id= " .  $id . "&format=json" );
     // final processed line used to access the api
-    $url = "http://api.petfinder.com/pet.getRandom?key=" . $public . "&location=10118&animal=" . $animal . "&output=full&format=json&sig=" . $code;
+    $url = "http://api.petfinder.com/pet.get?key=" . $public . "&id=" . $id . "&format=json&sig=" . $code;
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
