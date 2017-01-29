@@ -88,9 +88,9 @@ else {
                 accept : "false",
                 animalCode : <?php echo $code ?> // This should be updated to use the proper variable from the API
             },
-            function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
-            });
+            function(){
+                window.location.reload();
+            });;
     });
     $("#accept").click(function(){
         $.post("submitSwipe.php",
@@ -98,6 +98,9 @@ else {
                 accept : "false",
                 animalCode : <?php echo $code ?> // This should be updated to use the proper variable from the API
             },
+            function(){
+                window.location.reload();
+            });
 //            function(data, status){
 //                alert("Data: " + data + "\nStatus: " + status);
 //            });
