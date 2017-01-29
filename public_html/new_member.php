@@ -2,35 +2,36 @@
 
 $newMemberData = array();
 
-$newMemberData['Firstname'] = $_GET['first'];
-$newMemberData['Lastname'] = $_GET['last'];
-$newMemberData['Username'] = $_GET['username'];
-$newMemberData['Hash'] = crypt($_GET['password']);
-$newMemberData['Email'] = $_GET['email'];
-$newMemberData['Age'] = $_GET['age'];
-$newMemberData['Address'] = $_GET['address'];
-$newMemberData['Prov'] = $_GET['province'];
-$newMemberData['Postal'] = $_GET['postal'];
-$newMemberData['AnimalToAdopt'] = $_GET['pet'];
+var_dump($_POST);
+
+$newMemberData['firstname'] = $_POST['first'];
+$newMemberData['lastname'] = $_POST['last'];
+$newMemberData['email'] = $_POST['email'];
+$newMemberData['username'] = $_POST['username'];
+$newMemberData['hash'] = crypt($_POST['password']);
+$newMemberData['age'] = $_POST['age'];
+$newMemberData['address'] = $_POST['address'];
+$newMemberData['prov'] = $_POST['province'];
+$newMemberData['postal'] = $_POST['postal'];
+$newMemberData['animalToAdopt'] = $_POST['pet'];
+$newMemberData['adoptWithMedical'] = True;
+$newMemberData['previousOwnership'] = True;
 
 $json = json_encode($newMemberData);
 
 $url = 'http://www.robcardy.com/api/member/';
 
-$ch = curl_init($url);
 
-//Tell cURL that we want to send a POST request.
-curl_setopt($ch, CURLOPT_POST, 1);
-//Attach our encoded JSON string to the POST fields.
-curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-//Set the content type to application/json
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
-// Have cURL follow redirects
-//curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_USERPWD, "default:password123");
-curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-//Execute the request
-$result = curl_exec($ch);
-echo $result;
+$ch2 = curl_init($url);
+curl_setopt($ch2, CURLOPT_URL, $url);
+curl_setopt($ch2,CURLOPT_SSL_VERIFYPEER, false);
+curl_setopt($ch2, CURLOPT_USERPWD, "cardy31" . ":" . "JA83nq&E");
+curl_setopt($ch2, CURLOPT_POST, 1);
+curl_setopt($ch2, CURLOPT_POSTFIELDS, $newMemberData);
+curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+$data = curl_exec($ch2);
+curl_close($ch2);
+
+var_dump($data);
+print_r(json_decode($data, true));
 
