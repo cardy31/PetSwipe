@@ -43,6 +43,10 @@ foreach($allPets as $entry) {
         $name = $pet['name']['$t'];
         $age = $pet['age']['$t'];
         $description = $pet['description']['$t'];
+        $sex = $pet['sex']['$t'];
+        $photo = $pet['media']['photos']['photo'][0]['$t'];
+        
     }
 }
+
 
