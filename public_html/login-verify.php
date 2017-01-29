@@ -20,11 +20,8 @@ foreach($data as $val) {
         if (password_verify($password, $val['hash'])) {
             session_start();
             $_SESSION['user'] = $val['id'];
-            $value['title'] = "Swiping";
-            render("../public_html/swipe.php", $value, __FILE__);
+            $value['title'] = "Member Area";
+            render("../templates/member-view.php", $value, __FILE__);
         }
     }
 }
-
-//session_start();
-//$_SESSION['user'] = 1;
