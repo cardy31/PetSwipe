@@ -24,3 +24,4 @@ curl_close($ch);
 
 $name = $decoded['petfinder']['pet']['options']['status'];
 print_r($name);
+print_r("XD");
