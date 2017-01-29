@@ -2,6 +2,8 @@
 
 $newMemberData = array();
 
+print_r($_POST['first']);
+
 $newMemberData['Firstname'] = $_POST['first'];
 $newMemberData['Lastname'] = $_POST['last'];
 $newMemberData['Username'] = $_POST['username'];

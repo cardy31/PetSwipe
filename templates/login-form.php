@@ -1,6 +1,3 @@
-<div>
-    <h3>Login</h3>
-</div>
 <div id="signup-form">
     <form action="../public_html/login-verify.php">
         <div class="form-group">
@@ -13,5 +10,6 @@
         </div>
         <button type="submit" class="btn btn-default">Login</button>
     </form>
-    <h3>Don't have an account? <a href="../public_html/signup.php">Create one!</a></h3>
+    <br>
+    <p>Don't have an account? <a href="../public_html/signup.php">Create one!</a></p>
 </div>

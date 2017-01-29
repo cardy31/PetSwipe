@@ -42,12 +42,12 @@
         </div>
         <div class="checkbox">
             <label>
-                <input type="checkbox" name="pet"> I'm open to adopting a pet with medical issues.
+                <input type="checkbox" name="medical"> I'm open to adopting a pet with medical issues.
             </label>
         </div>
         <div class="checkbox">
             <label>
-                <input type="checkbox" name=""> I have owned a pet before.
+                <input type="checkbox" name="pet"> I have owned a pet before.
             </label>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
