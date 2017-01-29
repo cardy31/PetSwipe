@@ -35,6 +35,6 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec($ch);
 curl_close($ch);
 
-$values['title'] = "Member Area"
+$values['title'] = "Member Area";
 render("../templates/member-view.php", $values, __FILE__);
 
