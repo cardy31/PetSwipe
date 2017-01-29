@@ -10,12 +10,9 @@ function get_pet($id) {
     // creates the signature for accessing the api
     $id ="36311985";
     $met = ($secret . "key=" . $public . "&id=" . $id . "&format=json" );
-    print_r ($met);
     $code = md5($met);
-    print_r($code);
     // final processed line used to access the api
     $url = "http://api.petfinder.com/pet.get?key=" . $public . "&id=" . $id . "&format=json&sig=" . $code;
-    print_r($url);
     $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
